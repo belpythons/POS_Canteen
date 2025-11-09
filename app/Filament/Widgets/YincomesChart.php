@@ -3,7 +3,7 @@
 namespace App\Filament\Widgets;
 
 use Filament\Widgets\ChartWidget;
-use Illuminate\Support\Carbon;
+use Carbon\Carbon;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 use App\Models\Transaction;

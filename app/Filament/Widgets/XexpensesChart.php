@@ -3,7 +3,7 @@
 namespace App\Filament\Widgets;
 
 use Filament\Widgets\ChartWidget;
-use Illuminate\Support\Carbon;
+use Carbon\Carbon;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 use App\Models\Transaction;
@@ -19,7 +19,7 @@ class XexpensesChart extends ChartWidget
     {
         $startDate = ! is_null($this->pageFilters['startDate'] ?? null) ?
             Carbon::parse($this->pageFilters['startDate']) :
-            null;
+            now()->subDays(30);
 
         $endDate = ! is_null($this->pageFilters['endDate'] ?? null) ?
             Carbon::parse($this->pageFilters['endDate']) :
